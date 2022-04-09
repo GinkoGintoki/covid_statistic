@@ -1,0 +1,25 @@
+First content -> {
+    Header: COVID title,
+    NAVIGATION: give hint,
+    REPLACE MUSIC,
+    FIND IMAGES FOR COVID theme
+};
+
+Second content -> {
+    Kazakhstan Statistic block,
+    cases, deaths, recover,
+    if exist get vaccination people,
+};
+
+Third content -> {
+    Other country statistic block,
+    like second block content,
+};
+
+Fourth content -> {
+    set some links on public posts
+};
+
+Fifth content -> {
+    be healthy
+}
