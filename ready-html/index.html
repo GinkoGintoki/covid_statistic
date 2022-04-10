@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/app.js" defer></script>
 
@@ -16,94 +19,101 @@
 		<section class="gallery">
 
 			<div class="frame">
-				<div class="frame__content">
-					<h2>Beautiful World</h2>
+				<div class="header">
+					<h2>COVID statistic</h2>
+					<p>(use mouse scroll wheel for 3D experience)</p>
 				</div>
 			</div>
-
-			<div class="frame">
-				<div class="frame__content">
-					<div class="frame-media frame-media_left" style="background-image: url(images/1.jpg)"></div>
-				</div>
-			</div>
-
-			<div class="frame frame_bg">
-				<div class="frame__content">
-					<video class="frame-media frame-media_right" src="media/video_optimized.mp4" autoplay loop muted></video>
-				</div>
-			</div>
-
+			
 			<div class="frame"></div>
 
 			<div class="frame">
-				<div class="frame__content text-right">
-					<h3>Pure planet</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur elit adipisicing. Nemo fugit, rerum dolorem assumenda consequatur dicta error iure laboriosam temporibus.</p>
-				</div>
-			</div>
-
-			<div class="frame frame_bg">
-				<div class="frame__content">
-					<div class="frame-media frame-media_left" style="background-image: url(images/2.jpg)"></div>
+				<div class="">
+					<!-- <div class="frame-media frame-media_left" style="background-image: url(images/1.jpg)"></div> -->
+					<div class="frame-media frame-media_left">
+						<div class="frame__stat-block block-right">
+							<h3 class="country-title">Kazakhstan</h3>
+							<span id="kz_cases" class="cases"></span>
+							<p class="small-text">total cases</p>
+							<span id="kz_deaths" style="margin-top: 18px;" class="deaths"></span>
+							<p class="small-text">total deaths</p>
+							<span id="kz_recovered" style="margin-top: 18px;" class="recovered"></span>
+							<p class="small-text">total recovered</p>
+							<span id="kz_date" style="margin-left: auto;" class="date">
+								<script> document.write(new Date().toLocaleDateString()); </script></span>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="frame"></div>
 
 			<div class="frame frame_bg">
-				<div class="frame__content">
+				<div class="">
+					<video class="frame-media frame-media_right" src="media/covid__video_1.mp4" autoplay loop muted></video>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame">
+				<div class=" text-right">
+					<h3>Other Countries</h3>
+					<p>Just select another country to see COVID statistics</p>
+				</div>
+			</div>
+			
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+					<!-- <div class="frame-media frame-media_left" style="background-image: url(images/2.jpg)"></div> -->
+					<div class="frame-media frame-media_left">
+						<div class="frame__stat-block block-right">
+							<select id="select">
+								<option value="Choose country" disabled>Choose country</option>
+							</select>
+							<span id="cases" class="cases"></span>
+							<p class="small-text">total cases</p>
+							<span id="deaths" style="margin-top: 18px;" class="deaths"></span>
+							<p class="small-text">total deaths</p>
+							<span id="recovered" style="margin-top: 18px;" class="recovered"></span>
+							<p class="small-text">total recovered</p>
+							<span id="date" style="margin-left: auto;" class="date">
+								<script> document.write(new Date().toLocaleDateString()); </script></span>
+						</div>
+					</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="">
 					<div class="frame-media frame-media_right" style="background-image: url(images/3.jpg)"></div>
 				</div>
 			</div>
 
 			<div class="frame"></div>
 
-			<div class="frame">
-				<div class="frame__content text-left">
-					<h3>Ask the Mountains</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur elit. Rerum dolorem assumenda consequatur dicta error iure laboriosam temporibus omnis quae eaque aliquam esse unde accusamus dolores non soluta.</p>
-				</div>
-			</div>
-
-			<div class="frame frame_bg">
-				<div class="frame__content">
-					<div class="frame-media frame-media_right" style="background-image: url(images/4.jpg)"></div>
-				</div>
-			</div>
-
-			<div class="frame">
-				<div class="frame__content">
-					<video class="frame-media frame-media_left" src="media/video_optimized.mp4" autoplay loop muted></video>
-				</div>
-			</div>
-
-			<div class="frame"></div>
 			<div class="frame"></div>
 
 			<div class="frame frame_bg">
-				<div class="frame__content">
-					<div class="frame-media frame-media_right" style="background-image: url(images/5.jpg)"></div>
+				<div class="">
+					<video class="frame-media" src="media/covid__video_1.mp4" autoplay loop muted></video>
 				</div>
 			</div>
 
-			<div class="frame frame_bg">
-				<div class="frame__content">
-					<video class="frame-media" src="media/video_optimized.mp4" autoplay loop muted></video>
-				</div>
-			</div>
-
-			<div class="frame"></div>
 			<div class="frame"></div>
 
 			<div class="frame">
-				<div class="frame__content">© WebDesign Master</div>
+				<h2 class="">STAY HEALTHY</h2>
 			</div>
 
 		</section>
 	</div>
 
+	<div class="api"><a href="https://github.com/disease-sh/API.git" target="_blank" rel="noopener noreferrer">NovelCOVIDAPI</a></div>
 	<img class="soundbutton paused" src="images/sound.gif" alt="Alt">
-	<audio class="audio" src="media/ambient.mp3" loop></audio>
+	<audio class="audio" src="media/ambient.mp3" loop autoplay></audio>
 
 </body>
 </html>
