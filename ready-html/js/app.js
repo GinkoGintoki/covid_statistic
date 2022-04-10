@@ -19,16 +19,16 @@ window.onscroll = function() {
 		let frame = frames[i],
 				transform = `translateZ(${zVals[i]}px)`,
 				opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
-		frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
-		if (opacity == 0) {
-			setTimeout(() => {
-				frame.style.visibility = 'collapse'
-			}, 300)
-		} else if(opacity == 1) {
-			setTimeout(() => {
-				frame.style.visibility = 'visible'
-			}, 300)
-		}
+			frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
+			if (opacity == 0) {
+				setTimeout(() => {
+					frame.style.visibility = 'collapse'
+				}, 300)
+			} else if(opacity == 1) {
+				setTimeout(() => {
+					frame.style.visibility = 'visible'
+				}, 300)
+			}
 	})
 
 }
@@ -60,9 +60,9 @@ window.onblur = function() {
 const kzData = fetch('https://corona.lmao.ninja/v2/countries/Kazakhstan').then(function (response) {
 	return response.json();
 }).then(function (data) {
-	document.getElementById('kz_cases').innerHTML=data.cases
-	document.getElementById('kz_deaths').innerHTML=data.deaths
-	document.getElementById('kz_recovered').innerHTML=data.recovered
+	document.getElementById('kz_cases').innerHTML=numberWithCommas(data.cases)
+	document.getElementById('kz_deaths').innerHTML=numberWithCommas(data.deaths)
+	document.getElementById('kz_recovered').innerHTML=numberWithCommas(data.recovered)
 	console.log(data);
 }).catch(function (err) {
 	// There was an error
@@ -85,9 +85,9 @@ fetch('https://corona.lmao.ninja/v2/countries').then(function(response) {
 				fetch('https://corona.lmao.ninja/v2/countries/Kazakhstan').then(function (response) {
 					return response.json();
 				}).then(function (data) {
-					document.getElementById('cases').innerHTML=data.cases
-					document.getElementById('deaths').innerHTML=data.deaths
-					document.getElementById('recovered').innerHTML=data.recovered
+					document.getElementById('cases').innerHTML=numberWithCommas(data.cases)
+					document.getElementById('deaths').innerHTML=numberWithCommas(data.deaths)
+					document.getElementById('recovered').innerHTML=numberWithCommas(data.recovered)
 					console.log(data);
 				}).catch(function (err) {
 					// There was an error
@@ -108,9 +108,9 @@ select.addEventListener('change', event => {
 	fetch(`https://corona.lmao.ninja/v2/countries/${checkedOption.text}`).then(function (response) {
 		return response.json();
 	}).then(function (data) {
-		document.getElementById('cases').innerHTML=data.cases
-		document.getElementById('deaths').innerHTML=data.deaths
-		document.getElementById('recovered').innerHTML=data.recovered
+		document.getElementById('cases').innerHTML=numberWithCommas(data.cases)
+		document.getElementById('deaths').innerHTML=numberWithCommas(data.deaths)
+		document.getElementById('recovered').innerHTML=numberWithCommas(data.recovered)
 		console.log(data);
 	}).catch(function (err) {
 		// There was an error
@@ -118,3 +118,7 @@ select.addEventListener('change', event => {
 	});
   console.log(checkedOption.text);
 });
+
+function numberWithCommas(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

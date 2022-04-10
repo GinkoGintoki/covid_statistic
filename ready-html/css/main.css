@@ -29,6 +29,7 @@ body {
 	font-family: 'Manrope', sans-serif;
 	height: var(--depth);
 	font-weight: 300;
+	cursor: default;
 }
 body { scrollbar-width: none;  /* Firefox */ }
 body::-webkit-scrollbar { display: none;  /* Safari and Chrome */ }
