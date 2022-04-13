@@ -1,6 +1,6 @@
 // 3D Scroll
 
-let zSpacing = -1000,
+let zSpacing = -900,
 		lastPos = zSpacing / 5,
 		$frames = document.getElementsByClassName('frame'),
 		frames = Array.from($frames),
