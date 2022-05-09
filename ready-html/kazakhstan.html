@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kazakhstan COVID</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/app.js" defer></script>
+	<script src="js/local.js" defer></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<section class="gallery">
+
+			<div class="frame">
+				<div class="header">
+					<h2>KazCOVID statistic</h2>
+					<p>(use mouse scroll wheel for 3D experience)</p>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame">
+				<div class="">
+					<!-- <div class="frame-media frame-media_left" style="background-image: url(images/1.jpg)"></div> -->
+					<div class="frame-media frame-media_left">
+						<div class="frame__stat-block block-right">
+							<select id="selectCity">
+								<option value="Choose country" disabled>Choose city</option>
+							</select>
+							<span id="cityCases" class="cases"></span>
+							<p class="small-text">total cases</p>
+							<span id="cityDeaths" style="margin-top: 18px;" class="deaths"></span>
+							<p class="small-text">total deaths</p>
+							<span id="cityRecoveries" style="margin-top: 18px;" class="recovered"></span>
+							<p class="small-text">total recovered</p>
+							<span id="cityUpdateDate" style="margin-left: auto;" class="date"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="">
+					<video class="frame-media frame-media_right" src="media/covid_video_2.mp4" autoplay loop muted></video>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame">
+				<div class=" text-right">
+					<h3>Hospitals</h3>
+					<p>Just select hospital to see COVID statistics</p>
+				</div>
+			</div>
+
+			<div class="frame">
+                <div class="frame-media frame-media_left">
+                    <div class="frame__stat-block block-right">
+                        <select id="selectHospital">
+                            <option value="Choose hospital" disabled>Choose hospital</option>
+                        </select>
+                        <span id="hospitalCases" class="cases"></span>
+                        <p class="small-text">total cases</p>
+                        <span id="hospitalDeaths" style="margin-top: 18px;" class="deaths"></span>
+                        <p class="small-text">total deaths</p>
+                        <span id="hospitalRecoveries" style="margin-top: 18px;" class="recovered"></span>
+                        <p class="small-text">total recovered</p>
+                        <span id="hospitalUpdateDate" style="margin-left: auto;" class="date"></span>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+					<!-- <div class="frame-media frame-media_left" style="background-image: url(images/2.jpg)"></div> -->
+					
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="">
+					<div class="frame-media frame-media_right" style="background-image: url(images/2.jpg)"></div>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame"></div>
+
+			<div class="frame frame_bg">
+				<div class="">
+					<video class="frame-media" src="media/covid_video_2.mp4" autoplay loop muted></video>
+				</div>
+			</div>
+
+			<div class="frame"></div>
+
+			<div class="frame"></div>
+			<div class="frame">
+				<h2 class="">STAY HEALTHY</h2>
+			</div>
+
+		</section>
+	</div>
+	<img class="soundbutton paused" src="images/sound.gif" alt="Alt">
+	<audio class="audio" src="media/ambient.mp3" loop autoplay></audio>
+
+</body>
+</html>
