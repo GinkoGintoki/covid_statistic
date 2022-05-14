@@ -10,7 +10,7 @@ const allCity = fetch('http://127.0.0.1:8080/api/city/all').then(function (respo
         var option = document.createElement('option')
         option.value = data[i].id
         option.text = data[i].name
-        if (i === 0) {
+        if (data[i].id === 1) {
             cityId = data[i].id
             let date = new Date(data[i].dtUpdate);
             option.selected = 'selected'
@@ -40,6 +40,9 @@ const allCity = fetch('http://127.0.0.1:8080/api/city/all').then(function (respo
                     selectHospital.appendChild(opt)
                 }
             })
+
+            const imgHospital = document.getElementById('diagramHospital')
+            imgHospital.src='media/ast_diagram.png'
         }
         select.appendChild(option)
 	}
@@ -82,6 +85,21 @@ selectCity.addEventListener('change', event => {
                 selectHospital.appendChild(opt)
             }
         })
+
+        const imgHospital = document.getElementById('diagramHospital')
+        console.log(imgHospital, 'img', cityId, 'cityid')
+        imgHospital.src=''
+        if (cityId == 1) {
+            imgHospital.src='media/ast_diagram.png'
+        } else if (cityId == 2) {
+            imgHospital.src='media/aty_diagram.png'
+        } else if (cityId == 3) {
+            imgHospital.src='media/shy_diagram.png'
+        } else if (cityId == 4) {
+            imgHospital.src='media/akt_diagram.png'
+        } else if (cityId == 5) {
+            imgHospital.src='media/kst_diagram.png'
+        }
 	}).catch(function (err) {
 		// There was an error
 		console.warn('Something went wrong.', err);
